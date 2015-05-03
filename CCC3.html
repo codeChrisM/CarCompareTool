@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<header>
+		<em>Fill in the information and press enter</em>
+	<header>
+		<form>
+		<fieldset>
+<legend><strong>GENERATOR</strong>	</legend>
+		<table> 
+<tr>
+	<td>1!!!!!</td><td>2</td><td>3</td><td>4</td><td>5</td>
+</tr>
+<tr>
+	<td></td><td></td><td><input type="text" id="workDistance" class="universalInfo" required></td>  <td><input type="text" id="lifeSpan" class="universalInfo" required></td> <td><input type="text" id="currentGasCost" class="universalInfo" required></td> 
+</tr>
+<tr>
+	<td></td><td></td><td class="universalInfo">Distance to work (miles)</td>  <td class="universalInfo">what is car's life exeptancy?</td><td class="universalInfo">Current cost of Gas.</td> 
+</tr>
+<tr>
+	<td>Car Name<em> make and/or model</em></td>
+</tr>
+<tr>
+	<td><input type="text" id="carName" value="" required></td>
+</tr>
+<tr>
+	<td>Current Miliage</td><td>MPG</td><td>ASking Price</td><td></td><td></td>
+</tr>
+<tr>
+	<td><input type="text" id="currentMiles" required></td><td><input type="text" id="mpg" required></td><td><input type="text" id="askingPrice" required></td><td></td><td></td>
+</tr>
+
+<tr>
+	<td style="display: none;">><strong>any additional work<br> costs needed?</strong><em>exp: new transmission, windlshield, engine</em></td><td><input type=checkbox id=intern  value="moreWork"></td>
+</tr>
+<tr>
+	<td>How much do you expect that work to cost?</td><input type="text" id="moreWorkCost" value="" required>
+</tr>
+	</fieldset>
+		</form>
+
+<tr>
+	<td><input type="button" id="process" onClick="car()" ><strong>Get Me Hired</strong></td>
+</tr>
+</table>
+</fieldset>
+
+
+<section id="everything">
+<p id="insert"></p>
+</section>		
+
+
+
+</body>
+<footer style= font-size:"8px"><em>This is a footer<em></footer>
+</html>
+
+<script type="text/javascript">
+
+//--------------------------------------------------------------------------------
+var carName = document.getElementById("carName").value;
+var mpg = parseInt(document.getElementById("mpg").value);
+var costGallon = parseInt(document.getElementById("currentGasCost").value);
+var costCar = parseInt(document.getElementById("askingPrice").value);
+
+//one way trip s cause back and forth in a day  5 days for work week  52 weeks per year.
+
+var currentMiles = parseInt(document.getElementById("currentMiles").value);
+var dayMiles= parseInt(document.getElementById("workDistance").value);
+var aveYearMiles =  dayMiles*(2*5*52); //trips*days*weeks;
+var moreWork = document.getElementById("intern").checked;
+var lifeSpan = parseFloat(span()).toFixed(2);
+
+
+var gasCost= parseFloat((aveYearMiles, mpg, costGallon)).toFixed(2);;
+
+
+var possibleCost = moreWork + totalCost;
+
+var lowTotal= totalCost - possibleCost;
+
+var difCost = dif(currentMiles);
+if(moreWork){
+    var x= prompt("how much can the work cost up to?"," ");
+    var moreWork = parseInt(x);
+   } else {
+   var moreWork= parseInt(0);
+}
+
+//function for gas for year  #completed#
+function gas(arg1, arg2, arg3)
+	{         
+	var X= arg3*(arg1/arg2);
+	var yearlyGasCost= parseInt(x);
+	console.log("yearlyGasCost:"+ yearlyGasCost);
+	return yearlyGasCost;
+	}
+
+//How much GAS$ will be spent before hit 200,000 miles? # completed#
+function dif(arg1)
+	{
+	var difMiles = 200000 - arg1 ;
+	var difGallons=  difMiles/mpg  ;
+ 
+	var difAmount = difGallons * costGallon;
+	console.log(difAmount+111);
+	return difAmount;
+	}
+
+//number of years years to get to 200,000 miles. #completed#
+function span()
+  	{
+	var difMiles = 200000 - currentMiles ;
+	var lifeyears = difMiles/ aveYearMiles;
+	console.log(lifeyears+111);
+	return lifeyears;
+	}
+
+//MAX car will cost for it's LIFE #completed#
+function total(arg1)
+	{ 
+	var totala= parseInt(arg1) + difCost + moreWork;
+	console.log(totala+111);
+	return totala;
+	}
+
+var totalCost = parseInt(total(costCar));
+
+// low end estimate with out work done. #NOT DONE#
+function lowENDtotal(arg1)
+	{ 
+	var totala= arg1 + difCost + moreWork;
+	console.log(totala+111);
+	return totala;
+	}
+
+
+//Answers to if you should but the car #completed# 
+function car()
+	{
+document.getElementById("insert").innerHTML = 
+"carName: "+ typeof carName + "<br>" + 
+"mpg: " +typeof mpg + "<br>" +
+"costGallon: "+ typeof costGallon + "<br>" + 
+"mpg: "+ typeof mpg + "<br>" +
+"costCar: "+ typeof costCar + "<br>" +
+"gasCost: " + typeof gasCost + "<br>" + 
+"currentMiles: " +typeof currentMiles + "<br>" +
+"dayMiles: " +typeof dayMiles + "<br>" +
+"aveYearMiles: " +typeof aveYearMiles + "<br>" +
+"moreWork: " +typeof moreWork + "<br>" +
+"lifeSpan: " + typeof lifeSpan + "<br>" +
+"costCar: " + typeof costCar + "<br>";
+
+  console.log( "It would cost $" + totalCost + "to get 200,000 miles  from the " + carName +   ".");
+	console.log( "However, you will spend  at minimum $" + gasCost +  "on gas every year for"+ lifeSpan + "years,so consider that.."); 
+	}
+
+if(moreWork > 1){
+		console.log( "Or possibily only $" +  lowTotal + ", if you don't need that work done.");
+		}else{
+		console.log("so WHat you thinking?");
+		}
+
+// i would like it to travel through and break it down into months then weeks.
+
+
+
+//-------------------------------------
+
+</script>
