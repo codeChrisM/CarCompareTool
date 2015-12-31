@@ -1,2 +1,2 @@
 # CarCompareTool
-compares the price of the car
+comparitive tool to calculate the "true cost" of various cars based on years, milage, distance to work ect...
