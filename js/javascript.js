@@ -1,9 +1,11 @@
+
+
 //javascript code
 
 
 
-function test(){
 
+function test(){
 var carName = document.getElementById("carName").value;
 var mpg = parseInt(document.getElementById("mpg").value,10);
 var costGallon = parseInt(document.getElementById("currentGasCost").value,10);
@@ -11,17 +13,18 @@ var costCar = parseInt(document.getElementById("askingPrice").value,10);
 var currentMiles = parseInt(document.getElementById("currentMiles").value,10);
 var dayMiles= parseInt(document.getElementById("workDistance").value,10);
 var aveYearMiles =  dayMiles*(2*5*52);//one way trip s cause back and forth in a day  5 days for work week  52 weeks per year.
-var moreWork = document.getElementById("intern").checked;
+var moreWork = document.getElementById("moreWork").checked;
 
+console.log("dayMiles: " + dayMiles + typeof dayMiles);
 
 console.log("carName: " + carName + typeof carName);
 console.log("mpg: " + mpg + typeof mpg);
 console.log("costGallon: " + costGallon + typeof costGallon);
 console.log("costCar: " + costCar + typeof costCar);
 
-console.log("dayMiles: " + dayMiles + typeof dayMiles);
 console.log("aveYearMiles: " + aveYearMiles + typeof aveYearMiles); //trips*days*weeks;
 
+document.getElementById("answer").innerHTML = carname + mpg;
 }
 
 
@@ -64,27 +67,26 @@ console.log("aveYearMiles: " + aveYearMiles + typeof aveYearMiles); //trips*days
 
 
 
-//--------------------------------------------------------------------------------
-var moreWork = document.getElementById("intern").checked;
-
-var lifeSpan = parseFloat(span()).toFixed(2);
-console.log("lifespan1"+typeof lifeSpan);
-console.log("lifespan2"+ lifeSpan );
 
 
-
-//var gasCost= parseFloat((aveYearMiles, mpg, costGallon)).toFixed(2);
-var gasCost= 2; //build function to calculate gas cost.
-
-console.log("1 gas cost" + typeof gasCost);
+// // var lifeSpan = parseFloat(span()).toFixed(2);
+// // console.log("lifespan1"+typeof lifeSpan);
+// // console.log("lifespan2"+ lifeSpan );
 
 
 
-var possibleCost = moreWork + totalCost;
+// //var gasCost= parseFloat((aveYearMiles, mpg, costGallon)).toFixed(2);
+// var gasCost= 2; //build function to calculate gas cost.
 
-var lowTotal= totalCost - possibleCost;
 
-var difCost = dif(currentMiles);
+
+
+
+// var possibleCost = moreWork + totalCost;
+
+// var lowTotal= totalCost - possibleCost;
+
+
 
 
 
@@ -115,13 +117,16 @@ function gas(mpg, yearlyMiles, currentGasCost)
 }
 
 //How much GAS$ will be spent before hit 200,000 miles? # completed#
-function dif(arg1)
+function dif()
 {
-	var difMiles = 200000 - arg1 ;
-	var difGallons=  difMiles/mpg  ;
+	var costGallon = parseInt(document.getElementById("currentGasCost").value,10);
+	var mpg = parseInt(document.getElementById("mpg").value,10);
+	var currentMiles = parseInt(document.getElementById("currentMiles").value,10);
+	var difMiles = 200000 - currentMiles;
+	var difGallons=  difMiles/mpg;
 
-	var difAmount = difGallons * costGallon;
-	console.log(difAmount+111);
+	var difAmount = Math.round(difGallons * costGallon);
+	console.log("dif():"+ typeof difAmount + difAmount);
 	return difAmount;
 }
 
@@ -134,15 +139,7 @@ function span()
 	return lifeyears;
 }
 
-//MAX car will cost for it's LIFE #completed#
-function total(arg1)
-{ 
-	var totala= parseInt(arg1) + difCost + moreWork;
-	console.log(totala+111);
-	return totala;
-}
 
-var totalCost = parseInt(total(costCar));
 
 // low end estimate with out work done. #NOT DONE#
 function lowENDtotal(arg1)
@@ -154,12 +151,26 @@ function lowENDtotal(arg1)
 
 
 
+//MAX car will cost for it's LIFE #completed#
+function total()
+{ 
+	var moreWork = parseInt(document.getElementById("moreWorkCost").value,10);
+	var difCost= dif();
+	var costCar = parseInt(document.getElementById("askingPrice").value,10);
+	var grandTotal= costCar + difCost + moreWork;
 
+	console.log("total(): " + typeof grandTotal + grandTotal);
+	return grandTotal;
+}
+
+// var totalCost = total();
 
 
 //Answers to if you should but the car #completed# 
 function car(){
-"It would cost $" + totalCost + "to get 200,000 miles  from the " + carName +   ".");
+//"It would cost $" + totalCost + "to get 200,000 miles  from the " + carName +   ".");
+
+document.getElementById("answer").innerHTML = "It would cost $" + total() + "to get 200,000 miles  from the ";
 }
 
 if(moreWork > 1){
@@ -173,3 +184,5 @@ if(moreWork > 1){
 
 
 //-------------------------------------
+
+
