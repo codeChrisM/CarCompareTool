@@ -3,30 +3,23 @@
 
 
 function test(){
+
 var carName = document.getElementById("carName").value;
-
-mpg = parseInt(document.getElementById("mpg").value,10);
-
+var mpg = parseInt(document.getElementById("mpg").value,10);
 var costGallon = parseInt(document.getElementById("currentGasCost").value,10);
-
 var costCar = parseInt(document.getElementById("askingPrice").value,10);
 var currentMiles = parseInt(document.getElementById("currentMiles").value,10);
-
 var dayMiles= parseInt(document.getElementById("workDistance").value,10);
-var aveYearMiles =  dayMiles*(2*5*52);
+var aveYearMiles =  dayMiles*(2*5*52);//one way trip s cause back and forth in a day  5 days for work week  52 weeks per year.
 var moreWork = document.getElementById("intern").checked;
 
 
 console.log("carName: " + carName + typeof carName);
-
 console.log("mpg: " + mpg + typeof mpg);
 console.log("costGallon: " + costGallon + typeof costGallon);
 console.log("costCar: " + costCar + typeof costCar);
 
-//one way trip s cause back and forth in a day  5 days for work week  52 weeks per year.
-
 console.log("dayMiles: " + dayMiles + typeof dayMiles);
-
 console.log("aveYearMiles: " + aveYearMiles + typeof aveYearMiles); //trips*days*weeks;
 
 }
@@ -36,22 +29,42 @@ console.log("aveYearMiles: " + aveYearMiles + typeof aveYearMiles); //trips*days
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //--------------------------------------------------------------------------------
-var carName = document.getElementById("carName").value;
-var mpg = parseInt(document.getElementById("mpg").value);
-var costGallon = document.getElementById("currentGasCost").value;
-var costCar = parseInt(document.getElementById("askingPrice").value,10);
-
-//one way trip s cause back and forth in a day  5 days for work week  52 weeks per year.
-var currentMiles = document.getElementById("currentMiles").value;
-
-var dayMiles= parseInt(document.getElementById("workDistance").value,10);
-
-console.log("dayMiles: " + dayMiles + typeof dayMiles);
-
-var aveYearMiles =  dayMiles*(2*5*52);
-console.log("aveYearMiles: " + aveYearMiles + typeof aveYearMiles); //trips*days*weeks;
-
 var moreWork = document.getElementById("intern").checked;
 
 var lifeSpan = parseFloat(span()).toFixed(2);
@@ -146,39 +159,7 @@ function lowENDtotal(arg1)
 
 //Answers to if you should but the car #completed# 
 function car(){
-
-	console.log("yearluy gfkfjfjkafa"  );
-	console.log("carName: "+ typeof carName );
-	console.log("mpg: " +typeof mpg + "<br>" );
-	console.log("costGallon: "+ typeof costGallon + "<br>" ); 
-	console.log("mpg: "+ typeof mpg + "<br>" );
-	console.log("costCar: "+ typeof costCar + "<br>" );
-	console.log("gasCost: " + typeof gasCost +  gasCost );
-	console.log("currentMiles: " +typeof currentMiles +currentMiles  );
-	console.log("dayMiles2: " +typeof dayMiles + dayMiles+ "daymiles2" );
-	console.log("aveYearMiles: " +typeof aveYearMiles + aveYearMiles );
-	console.log("moreWork: " +typeof moreWork + "<br>" );
-	console.log( "However, you will spend  at minimum $" + gas(mpg, aveYearMiles, gasCost)); 
-	console.log("lifeSpan: " + typeof lifeSpan + lifeSpan  );
-	console.log("costCar: " + typeof costCar +  costCar +"<br>");
-
-
-
-	document.getElementById("insert").innerHTML = 
-	"carName: "+ typeof carName + "<br>" + 
-	"mpg: " +typeof mpg + "<br>" +
-	"costGallon: "+ typeof costGallon + "<br>" + 
-	"mpg: "+ typeof mpg + "<br>" +
-	"costCar: "+ typeof costCar + "<br>" +
-	"gasCost: " + typeof gasCost + "<br>" + 
-	"currentMiles: " +typeof currentMiles + "<br>" +
-	"dayMiles: " +typeof dayMiles + "<br>" +
-	"aveYearMiles: " +typeof aveYearMiles + "<br>" +
-	"moreWork: " +typeof moreWork + "<br>" +
-	"lifeSpan: " + typeof lifeSpan + "<br>" +
-	"costCar: " + typeof costCar + "<br>";
-
-	console.log( "It would cost $" + totalCost + "to get 200,000 miles  from the " + carName +   ".");
+"It would cost $" + totalCost + "to get 200,000 miles  from the " + carName +   ".");
 }
 
 if(moreWork > 1){
