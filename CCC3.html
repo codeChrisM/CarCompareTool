@@ -5,29 +5,27 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="js/javascript.js"></script>
-    <title> car compare tool </title>
+    <title> Car Compare Tool </title>
 </head>
 <body>
 	<header>
 		<em>Fill in the information and press enter</em>
 		<header>
-    	    
 		</header>
 			<h3>how to use</h3>
-			<p>type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</p>
+			<p width: "500px" margin="auto">type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</p>
 			<form>
 				<fieldset>
-					<legend><strong>GENERATOR</strong>	</legend>
-
+					<legend><strong>Car Comparison Tool</strong></legend>
 					<table> 
 						<tr>
 							<td>UpFront Work</td><td></td><td></td><td></td><td></td>
 						</tr>
 						<tr>
-							<td></td><td></td><td><input type="text" id="workDistance" required></td><td><input type="text" id="lifeSpan" class="universalInfo" required></td> <td><input type="text" id="currentGasCost" required></td> 
+							<td></td><td></td><td><input type="text" id="workDistance" required></td><td><!--<input type="text" id="lifeSpan" class="universalInfo" required>--></td> <td><input type="text" id="currentGasCost" required></td> 
 						</tr>
 						<tr>
-							<td></td><td></td><td class="universalInfo">Distance to work (miles)</td>  <td class="universalInfo">what is car's life exeptancy?</td><td class="universalInfo">Current cost of Gas.</td> 
+							<td></td><td></td><td class="universalInfo">Distance to work (miles)</td>  <td class="universalInfo"><!--what is car's life exeptancy?--></td><td class="universalInfo">Current cost of Gas.</td> 
 						</tr>
 						<tr>
 							<td>Car Name<em> make and/or model</em></td>
@@ -42,7 +40,6 @@
 							<td><input type="text" id="currentMiles" required></td><td><input type="text" id="mpg" required></td><td><input type="text" id="askingPrice" required></td><td></td><td></td>
 						</tr>
 
-						<tr>
 							<td style="display: none;"><strong>any additional work<br> costs needed?</strong><em>exp: new transmission, windlshield, engine</em></td><td><input type="checkbox" id="moreWork"  value="moreWork"></td>
 						</tr>
 						<tr>
@@ -52,6 +49,7 @@
 					<td><input type="button" id="process" onclick="car()" ><strong>Cost of Car</strong></td>
 				</tr>
 			</table>
+        <img id= "carPhoto" src="http://forgeandmorrow.com/assets/Allianz_OldCarNewCar/ForgeAndMorrow_Allianz_OldCarNewCar.jpg">
         </fieldset>
 		</form>
 		<p id="answer"></p>
