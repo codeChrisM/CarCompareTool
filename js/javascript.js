@@ -1,5 +1,13 @@
 
 
+
+
+$(function(){
+	$("button").click(function(){
+		$("#box").fadeOut(carPhoto)
+	});
+});
+
 function test(){ //test was used to verify that issue was only happenign with globals  created from parsed strings
 
 var mpg = parseInt(document.getElementById("mpg").value,10);
@@ -115,7 +123,6 @@ function gas(mpg, yearlyMiles, currentGasCost)
 	console.log("yearlyGasCost:"+ typeof yearlyGasCost);
 	return yearlyGasCost;
 }
-*/
 if(moreWork > 1){
 	console.log( "Or possibily only $" +  lowTotal + ", if you don't need that work done.");
 }else{
@@ -123,7 +130,8 @@ if(moreWork > 1){
 }
 // i would like it to travel through and break it down into months then weeks.
 
-*\
+
+*/
 
 
 
