@@ -11,56 +11,105 @@
 
     <script type="text/javascript" src="js/javascript.js"></script>
 
+<!-- Bootstrap -->
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="codeChris_BTStyle.css">
+
+
+
+
+
+
     <title> Car Compare Tool </title>
 </head>
-<body>
-	<header>
-		<em>Fill in the information and press enter</em>
-		<header>
-		</header>
-			<p>type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</p>
-			<form>
-				<fieldset>
-					<legend><strong>Car Comparison Tool</strong></legend>
-					<table> 
-						<tr>
-							<td>UpFront Work</td><td></td><td></td><td></td><td></td>
-						</tr>
-						<tr>
-							<td></td><td></td><td><input type="text" id="workDistance" required></td><td><!--<input type="text" id="lifeSpan" class="universalInfo" required>--></td> <td><input type="text" id="currentGasCost" required></td> 
-						</tr>
-						<tr>
-							<td></td><td></td><td class="universalInfo">Distance to work (miles)</td>  <td class="universalInfo"><!--what is car's life exeptancy?--></td><td class="universalInfo">Current cost of Gas.</td> 
-						</tr>
-						<tr>
-							<td>Car Name<em> make and/or model</em></td>
-						</tr>
-						<tr>
-							<td><input type="text" id="carName" value="" required></td>
-						</tr>
-						<tr>
-							<td>Current Miliage</td><td>MPG</td><td>ASking Price</td><td></td><td></td>
-						</tr>
-						<tr>
-							<td><input type="text" id="currentMiles" required></td><td><input type="text" id="mpg" required></td><td><input type="text" id="askingPrice" required></td><td></td><td></td>
-						</tr>
+<div class="container">
 
-							<td style="display: none;"><strong>any additional work<br> costs needed?</strong><em>exp: new transmission, windlshield, engine</em></td><td><input type="checkbox" id="moreWork"  value="moreWork"></td>
-						</tr>
-						<tr>
-							<td>How much do you expect that work to cost?</td><input type="text" id="moreWorkCost" value="" required>
-						</tr>
-				<tr>
-					<td><input type="button" id="process" onclick="car()" ><strong>Cost of Car</strong></td>
-				</tr>
-			</table>
-        <img id= "carPhoto" src="http://forgeandmorrow.com/assets/Allianz_OldCarNewCar/ForgeAndMorrow_Allianz_OldCarNewCar.jpg">
-        </fieldset>
-		</form>
-		<p id="answer"></p>
+<body >
+	<div class="row">
+	    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4
+	    </div>
+	    <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8
+	    </div>
+  </div>
+
+
+<!--Car Compare Tool-->
+<div class="row">
+    <div id="" class=" col-xs-12 " style="background-color:lavender;">
+    	<em>Fill in the information and press enter</em>
+  	</div>
+</div>
+<div class="row">
+    <article class="col-xs-4 " style="background-color:red;">gdgdgd
+    </article>
+    <article class="col-xs-4 " style="background-color:lavenderblush;">
+      <h2>Car Compare Tool</h2>
+        <p>type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</p>
+     </article>
+     <div class="col-xs-4 " style="background-color:red;">hdhdhdhd</div>
+</div>
+
+<!--FORM -->
+<div class="row">
+	<form class="form-inline col-xs-12" style="background-color:lavenderblush;">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
+	    <div class="input-group">
+	      <div class="input-group-addon">$</div>
+	      <input type="text" class="form-control" id="moreWork" placeholder="UpFront Work">
+	      <div class="input-group-addon">.00</div>
+	    </div>
+	  </div>
+	</form>
+</div>
+<div class="row">
+	<form class="form-inline col-xs-12" style="background-color:lavenderblush;">
+	  <div class="form-group">
+	  	<p> dgsdg</p>
+	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
+	    <div class="input-group">
+	      <input type="text" class="form-control" id="workDistance" placeholder="Number of miles to work">
+	    </div>
+	  </div>
+	</form>
+</div>
+<div class="row">
+	<form class="form-inline col-xs-12" style="background-color:lavenderblush;">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputAmount">Current cost of Gas</label>
+	    <div class="input-group">
+	      <div class="input-group-addon">$</div>
+	      <input type="text" class="form-control" id="moreWork" placeholder="UpFront Work">
+	      <div class="input-group-addon">.00</div>
+	    </div>
+	  </div>
+	</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 			
-	</body>
-	<footer style= font-size:"8px"><em>This is a footer</em></footer>
+</body>
+</div>
 </html>
 
 
