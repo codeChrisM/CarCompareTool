@@ -25,69 +25,59 @@
 
     <link rel="stylesheet" type="text/css" href="codeChris_BTStyle.css">
 
-
-
-
-
-
     <title> Car Comparison Tool </title>
 </head>
+
+
+<body  style="background-color: #584960; ">
 <div class="container">
 
-<body >
-	<div class="row">
-	    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4
-	    </div>
-	    <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8
-	    </div>
+
+<!--descip-->
+<div class="row">
+    <div class="col-xs-offset-2 col-xs-8 " style="background-color: #B284CB; border-radius:10px;">
+    	<p><strong>Useing this tool will better prepare it's user to make an educated decision on the true cost to select one car over another.  This estimates the cost from the car's current state to get to 200,000 miles.</strong></p>
   	</div>
+</div>
+
+
+<!--title-->
+<div class="row">
+   <div class="col-xs-offset-3 col-xs-5" style="background-color: #E2CEEE;  text-align: center;   border-radius:20px;">
+    <h1>Car Compare Tool</h1>  
+  </div>
+</div>
+
 
 
 <!--Car Compare Tool-->
+<div class= "container" style="background-color: #E2CEEE;  border-radius:10px;">
+
+<!--Instructions-->
 <div class="row">
-    <div id="" class=" col-xs-12 " style="background-color:lavender ;">
-    	<em>Fill in the information and press enter</em>
-  	</div>
-</div>
-<div class="row">
-    <article class="col-xs-4 " style="background-color:red;">gdgdgd
-    </article>
-    <article class=" col-xs-4 " style="background-color:blue;">
-      <h2>Car Compare Tool</h2>
-        <p>type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</p>
+    <article class=" col-xs-offset-2 col-xs-8 " style="background-color:#E2CEaa; border-radius:10px;">
+      <h4>Type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</h4>
      </article>
-     <div class="col-xs-4 " style="background-color:red;">hdhdhdhd</div>
 </div>
+
+
 
 <!--FORM -->
 <div class="row">
 
-	<form class= "col-xs-offset-4  col-xs-4" style="background-color:Red;">
+	<form class= "col-xs-offset-2 col-xs-8 " >
 	  <div class="form-group">
 	  	<div class="input-group-addon">Name of Car</div>
 	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
 	    <div class="input-group">
-	      <input type="text" class="form-control" id="workDistance" placeholder="make and model">
-	    </div>
-	  </div>
-	</form>
+	      <input type="text" class="form-control " id="carName" placeholder="make and model">
 
-</div>
-<div class="row">
-	<form class="col-xs-offset-4  col-xs-3" style="background-color:Red;">
-	  <div class="form-group">
-	  	<div class="input-group-addon">UpFront Work Cost</div>
-	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
-	    <div class="input-group">
-	      <div class="input-group-addon">$</div>
-	      <input type="text" class="form-control" id="moreWork" placeholder="UpFront Work">
-	      <div class="input-group-addon">.00</div>
-	    </div>
 	  </div>
 	</form>
 </div>
+
 <div class="row">
-	<form class="form-inline col-xs-offset-4  col-xs-3" style="background-color:green;">
+	<form class="form-inline col-xs-offset-2  col-xs-4" >
 	  <div class="form-group">
 	  	<div class="input-group-addon">DISTANCE TO WORK</div>
 	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
@@ -97,34 +87,36 @@
 	    </div>
 	  </div>
 	</form>
-		<form class="form-inline  col-xs-2" style="background-color:green;">
+		<form class="form-inline  col-xs-4">
 	  <div class="form-group">
 	  	<div class="input-group-addon">  Current Cost of Gas</div>
 	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
 	    <div class="input-group">
-	      <input type="text" class="form-control" id="workDistance" placeholder="Number of miles to work">
+	      <input type="text" class="form-control" id="currentGasCost" placeholder="Number of miles to work">
 	      <div class="input-group-addon">Miles</div>
 	    </div>
 	  </div>
 	</form>
 </div>
+
+
 <div class="row">
-	<form class="form-inline col-xs-offset-4  col-xs-3" style="background-color:green;">
+	<form class="form-inline col-xs-offset-2  col-xs-4" >
 	  <div class="form-group">
 	  	<div class="input-group-addon">Current Milage</div>
 	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
 	    <div class="input-group">
-	      <input type="text" class="form-control" id="workDistance" placeholder="Number of miles to work">
+	      <input type="text" class="form-control" id="currentMiles" placeholder="Number of miles to work">
 	      <div class="input-group-addon">Miles</div>
 	    </div>
 	  </div>
 	</form>
-		<form class="form-inline  col-xs-2" style="background-color:green;">
+		<form class="form-inline  col-xs-4" >
 	  <div class="form-group">
 	  	<div class="input-group-addon">MPG</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
+	    <label class="sr-only" for="exampleInputAmount">Miles</label>
 	    <div class="input-group">
-	      <input type="text" class="form-control" id="workDistance" placeholder="Number of miles to work">
+	      <input type="text" class="form-control" id="mpg" placeholder="MPG">
 	      <div class="input-group-addon">Miles</div>
 	    </div>
 	  </div>
@@ -132,13 +124,24 @@
 </div>
 
 <div class="row">
-	<form class="col-xs-offset-4  col-xs-3" style="background-color:Red;">
+	<form class="col-xs-offset-2  col-xs-4">
 	  <div class="form-group">
-	  	<div class="input-group-addon">Asking Price</div>
+	  	<div class="input-group-addon">UpFront Work Cost</div>
 	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
 	    <div class="input-group">
 	      <div class="input-group-addon">$</div>
-	      <input type="text" class="form-control" id="moreWork" placeholder="UpFront Work">
+	      <input type="text" class="form-control" id="moreWorkCost" placeholder="UpFront Work">
+	      <div class="input-group-addon">.00</div>
+	    </div>
+	  </div>
+	</form>
+	<form class="col-xs-4">
+	  <div class="form-group">
+	  	<div class="input-group-addon">Asking Price</div>
+	    <label class="sr-only" for="exampleInputAmount">Asking Price</label>
+	    <div class="input-group">
+	      <div class="input-group-addon">$</div>
+	      <input type="text" class="form-control" id="askingPrice" placeholder="Asking Price">
 	      <div class="input-group-addon">.00</div>
 	    </div>
 	  </div>
@@ -148,18 +151,20 @@
 
 
 
+<div class="row">
+<button type="button" class=" col-xs-offset-4  col-xs-3 btn btn-primary btn-lg btn-sample" id="process"  onclick="car()">Process</button>
+</div>
 
 
+<div class="row">
 
-
-
-
-
+	<p class=" col-xs-offset-3 col-xs-5" id="answer" style="background-color: #E2D9E7;"> </p>
+</div>
 
 
 			
-</body>
 </div>
+</body>
 </html>
 
 
