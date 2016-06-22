@@ -82,6 +82,21 @@ function car(){
 var carName = document.getElementById("carName").value;
 document.getElementById("answer").innerHTML = "It would cost $" + total() + " to get 200,000 miles  from the " +carName;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 //--------------future implimentation------------
 

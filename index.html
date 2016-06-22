@@ -3,7 +3,6 @@
 <meta charset="UTF-8">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
 
     <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
     <!--incase JQuery serve is down or the user has no jquery yet-->
@@ -24,27 +23,19 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="codeChris_BTStyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title> Car Comparison Tool </title>
 </head>
 
 
-<body  style="background-color: #584960; ">
-<div class="container">
-
-
-<!--descip-->
-<div class="row">
-    <div class="col-xs-offset-2 col-xs-8 " style="background-color: #B284CB; border-radius:10px;">
-    	<p><strong>Useing this tool will better prepare it's user to make an educated decision on the true cost to select one car over another.  This estimates the cost from the car's current state to get to 200,000 miles!</strong></p>
-  	</div>
-</div>
-
+<body  style="background-color: #729AD4; ">
+<div class="container-inline">
 
 <!--title-->
-<div class="row">
-   <div class="col-xs-offset-3 col-xs-5" style="background-color: #E2CEEE;  text-align: center;   border-radius:20px;">
-    <h1>Car Compare Tool</h1>  
+<div class="row" id="titleBar">
+   <div class="col-xs-12" >
+    <h1>Car Comparison Tool</h1>  
   </div>
 </div>
 
@@ -54,24 +45,26 @@
 <div class= "container" style="background-color: #E2CEEE;  border-radius:10px;">
 
 <!--Instructions-->
-<div class="row">
-    <article class=" col-xs-offset-2 col-xs-8 " style="background-color:#E2CEaa; border-radius:10px;">
-      <h4>Type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</h4>
+<div class="row" id="instructions" >
+	<iframe class=" col-xs-12 col-sm-offset-2 col-sm-4 vcenter"  width="560" height="315" src="https://www.youtube.com/embed/XOpxutn158s" frameborder="0" allowfullscreen></iframe>
+    <article class=" col-xs-12 col-sm-offset-0 col-sm-4 vcenter" >
+      <p>Type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</p>
+          	<p><strong>Useing this tool will better prepare it's user to make an educated decision on the true cost to select one car over another.  This estimates the cost from the car's current state to get to 200,000 miles!</strong></p>
      </article>
 </div>
 
 
 
 <!--FORM -->
-<div class="row">
 
-	<form class= "col-xs-offset-2 col-xs-8 " >
+<div class="row">
+	<form class= "col-xs-offset-2 col-xs-8  "  style="background-color: blue; "  >
 	  <div class="form-group">
 	  	<div class="input-group-addon">Name of Car</div>
 	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
 	    <div class="input-group">
 	      <input type="text" class="form-control " id="carName" placeholder="make and model">
-
+	      </div>
 	  </div>
 	</form>
 </div>
