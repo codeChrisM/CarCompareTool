@@ -22,7 +22,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="codeChris_BTStyle.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title> Car Comparison Tool </title>
@@ -58,32 +57,40 @@
 <!--FORM -->
 
 <div class="row">
-	<form class= "col-xs-offset-2 col-xs-8  "  style="background-color: blue; "  >
+	<form class= "col-xs-offset-2 col-xs-4 "  style="background-color: blue; "  >
 	  <div class="form-group">
 	  	<div class="input-group-addon">Name of Car</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
 	    <div class="input-group">
 	      <input type="text" class="form-control " id="carName" placeholder="make and model">
-	      </div>
+	    </div>
 	  </div>
 	</form>
-</div>
-
-<div class="row">
-	<form class="form-inline col-xs-offset-2  col-xs-4" >
-	  <div class="form-group">
-	  	<div class="input-group-addon">DISTANCE TO WORK</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
+	<form class="form-inline  col-xs-4" style="background-color: purple;" >
+	  <div class="input-group-addon">DISTANCE TO WORK</div>
 	    <div class="input-group">
 	      <input type="text" class="form-control" id="workDistance" placeholder="Number of miles to work">
 	      <div class="input-group-addon">Miles</div>
 	    </div>
+	</form>
+</div>
+
+<div class="row">
+	<form class="form-inline col-xs-offset-2  col-xs-4" style="background-color: red;">
+	  <div class="form-group">
+	  	<div class="input-group-addon">Asking Price</div>
+	    <div class="input-group">
+	      <div class="input-group-addon">$</div>
+	      <input type="text" class="form-control" id="askingPrice" placeholder="Asking Price">
+	      <div class="input-group-addon">.00</div>
+	    </div>
+	  	
 	  </div>
 	</form>
-		<form class="form-inline  col-xs-4">
+
+
+		<form class="form-inline  col-xs-4" style="background-color: purple;" >
 	  <div class="form-group">
 	  	<div class="input-group-addon">  Current Cost of Gas</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
 	    <div class="input-group">
 	      <input type="text" class="form-control" id="currentGasCost" placeholder="Number of miles to work">
 	      <div class="input-group-addon">Miles</div>
@@ -94,17 +101,20 @@
 
 
 <div class="row">
-	<form class="form-inline col-xs-offset-2  col-xs-4" >
+	<form class="form-inline col-xs-offset-2  col-xs-4"  style="background-color: green;">
 	  <div class="form-group">
-	  	<div class="input-group-addon">Current Milage</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
+	  	<div class="input-group-addon">UpFront Work Cost</div>
+	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
 	    <div class="input-group">
-	      <input type="text" class="form-control" id="currentMiles" placeholder="Number of miles to work">
-	      <div class="input-group-addon">Miles</div>
-	    </div>
+	      <div class="input-group-addon">$</div>
+	      <input type="text" class="form-control" id="moreWorkCost" placeholder="UpFront Work">
+	      <div class="input-group-addon">.00</div>
+	  </div>
+
+	  	
 	  </div>
 	</form>
-		<form class="form-inline  col-xs-4" >
+		<form class="form-inline  col-xs-4" style="background-color: yellow;" >
 	  <div class="form-group">
 	  	<div class="input-group-addon">MPG</div>
 	    <label class="sr-only" for="exampleInputAmount">Miles</label>
@@ -117,26 +127,19 @@
 </div>
 
 <div class="row">
-	<form class="col-xs-offset-2  col-xs-4">
+	<form class="col-xs-offset-2  col-xs-4" style="background-color: orange;" >
 	  <div class="form-group">
-	  	<div class="input-group-addon">UpFront Work Cost</div>
-	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
+	  <div class="input-group-addon">Current Milage</div>
 	    <div class="input-group">
-	      <div class="input-group-addon">$</div>
-	      <input type="text" class="form-control" id="moreWorkCost" placeholder="UpFront Work">
-	      <div class="input-group-addon">.00</div>
+	      <input type="text" class="form-control" id="currentMiles" placeholder="Number of miles to work">
+	      <div class="input-group-addon">Miles</div>
+	    </div>
 	    </div>
 	  </div>
 	</form>
 	<form class="col-xs-4">
 	  <div class="form-group">
-	  	<div class="input-group-addon">Asking Price</div>
-	    <label class="sr-only" for="exampleInputAmount">Asking Price</label>
-	    <div class="input-group">
-	      <div class="input-group-addon">$</div>
-	      <input type="text" class="form-control" id="askingPrice" placeholder="Asking Price">
-	      <div class="input-group-addon">.00</div>
-	    </div>
+
 	  </div>
 	</form>
 </div>
