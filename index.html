@@ -41,7 +41,7 @@
 
 
 <!--Car Compare Tool-->
-<div class= "container" Style="	background-color: gray;  ">
+<div class= "container" >
 
 <!--Instructions-->
 <div class="row" id="instructions" >
@@ -55,8 +55,8 @@
 
 
 <!--FORM -->
-<div class="row">
-	<form class="form-inline col-xs-offset-2 col-xs-4" style="background-color: red;">
+<div class="row" id="formRow1">
+	<form class="form-inline col-xs-offset-2 col-xs-4 formBox"  >
 	  <div class="form-group">
 	  	<div class="input-group-addon">Name of Car</div>
 	    <div class="input-group">
@@ -64,7 +64,7 @@
 	    </div>	  	
 	  </div>
 	</form>
-	<form class="form-inline  col-xs-4" style="background-color: purple;" >
+	<form class="form-inline  col-xs-4 formBox"  >
 	  <div class="form-group">
 	  	<div class="input-group-addon">DISTANCE TO WORK</div>
 	    <div class="input-group">
@@ -76,7 +76,7 @@
 </div>
 
 <div class="row">
-	<form class="form-inline col-xs-offset-2 col-xs-4" style="background-color: red;">
+	<form class="form-inline col-xs-offset-2 col-xs-4 formBox">
 	  <div class="form-group">
 	  	<div class="input-group-addon">Asking Price</div>
 	    <div class="input-group">
@@ -86,11 +86,11 @@
 	    </div>	  	
 	  </div>
 	</form>
-	<form class="form-inline  col-xs-4" style="background-color: purple;" >
+	<form class="form-inline  col-xs-4 formBox" >
 	  <div class="form-group">
-	  	<div class="input-group-addon">  Current Cost of Gas</div>
+	  	<div class="input-group-addon"> Current Cost of Gas</div>
 	    <div class="input-group">
-	      <input type="text" class="form-control" id="currentGasCost" placeholder="Number of miles to work">
+	      <input type="text" class="form-control" id="currentGasCost" placeholder="Cost of Gas Today">
 	      <div class="input-group-addon">Miles</div>
 	    </div>
 	  </div>
@@ -99,7 +99,7 @@
 
 
 <div class="row">
-	<form class="form-inline col-xs-offset-2  col-xs-4"  style="background-color: green;">
+	<form class="form-inline col-xs-offset-2  col-xs-4 formBox" >
 	  <div class="form-group">
 	  	<div class="input-group-addon">UpFront Work Cost</div>
 	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
@@ -110,7 +110,7 @@
 	  </div>  	
 	  </div>
 	</form>
-	<form class="form-inline  col-xs-4" style="background-color: yellow;" >
+	<form class="form-inline  col-xs-4 formBox">
 	  <div class="form-group">
 	  	<div class="input-group-addon">MPG</div>
 	    <label class="sr-only" for="exampleInputAmount">Miles</label>
@@ -122,8 +122,19 @@
 	</form>	
 </div>
 
-<div class="row">
-	<form class="col-xs-offset-6 col-xs-4" style="background-color: orange;" >
+<div class="row ">
+	<form class="form-inline col-xs-offset-2  col-xs-4 formBox" >
+	  <div class="form-group">
+	  	<div class="input-group-addon">Future Expansion</div>
+	    <label class="sr-only" for="exampleInputAmount">Future Expansion</label>
+	    <div class="input-group">
+	      <div class="input-group-addon"></div>
+	      <input type="text" class="form-control" id="TBD" placeholder="Future Expansion">
+	      <div class="input-group-addon">.00</div>
+	  </div>  	
+	  </div>
+	</form>
+	<form class="  form-inline  col-xs-4 formBox" >
 	  <div class="form-group">
 	  <div class="input-group-addon">Current Milage</div>
 	    <div class="input-group">
@@ -138,20 +149,53 @@
 
 
 
-<div class="row">
-<button type="button" class=" col-xs-offset-4  col-xs-3 btn btn-primary btn-lg btn-sample" id="process"  onclick="car()">Process</button>
+<div class="row" style="padding-top:1%;
+padding-bottom:1%">
+<div class="container">
+
+<button type="button" class=" col-xs-offset-4  col-xs-4 btn btn-primary btn-lg btn-sample" id="process"  onclick="car()">Process</button>
+</div>
 </div>
 
 
-<div class="row">
 
-	<p class=" col-xs-offset-3 col-xs-5" id="answer" style="background-color: #E2D9E7;"> </p>
+<div class="row" style="">
+<div class="container-inline">
+
+	<p class=" col-xs-offset-2 col-xs-8" id="answer"  style=" "></p>
+
 </div>
+</div>
+
+
+
+
+
 
 
 			
 </div>
 </body>
+<div class="row">
+	<div class="container-inline">
+<footer style="background-color: #e2eced;" class=" col-xs-12 text-center">
+	<img src="images/codeChris Logo.png" class="logosmall"/>
+
+
+<div class="row">
+	<div class="container text-center">
+      <div class="btn-group" role="group" ><!--buttons-->
+          <a href="http://www.codechris.com" target="_blank" type="submit" class="btn btn btn-default btn-group btn-group-xs" style="width:200px;"><span class="glyphicon glyphicon-play"></span> Visit My Website</a>     
+          <a href="http://github.com/keyFrameM/CarCompareTool" target="_blank" type="submit" class="btn btn btn-default btn-group btn-group-xs" style="width:200px;"><span class="glyphicon glyphicon-folder-open"></span> &nbsp View SourceCode</a>
+      </div>  
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+</footer>
 </html>
 
 
