@@ -22,6 +22,10 @@ body{
 	background-color: #e2eced; 
 }
 
+.formRow{
+
+}
+
 .vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -32,24 +36,21 @@ body{
 	height: 315;
 	border-radius:5px;
 	background-color: black;
-
-
 }
+
 #instructions article{
 	border-radius:5px;
 	background-color: #e2eced;
 }
 
-form{
-	background-color: gray;
+.form-group{
+	padding-top:1%;
+	padding-bottom:1%;
 }
 
-.form-group{
-	padding:10px;
-	background-color: gray;	
-}
 .formBox{
 	background-color: gray;
+	border-radius: 10px;
 }
 
 #formRow1{
@@ -60,7 +61,9 @@ form{
 	width: auto;
 	height: 35px;
 }
-
+#process{
+	margin-top: 2%;
+}
 
 
 .color-primary-0 { color: #26785F }	/* Main Primary color */
