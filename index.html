@@ -3,11 +3,9 @@
 <meta charset="UTF-8">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
 
     <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
-    <!--incase JQuery serve is down or the user has no jquery yet-->
-    <script> window.jQuery || document.write('<script src= "js/jquery-1.12.3.min.js"<\/script>');</script>
+
 
     <script type="text/javascript" src="js/javascript.js"></script>
 
@@ -23,148 +21,170 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="codeChris_BTStyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title> Car Comparison Tool </title>
 </head>
 
 
-<body  style="background-color: #584960; ">
-<div class="container">
+<body  style="background-color: #729AD4; ">
+<div class="container-inline" style="background-color">
 
-
-<!--descip-->
-<div class="row">
-    <div class="col-xs-offset-2 col-xs-8 " style="background-color: #B284CB; border-radius:10px;">
-    	<p><strong>Useing this tool will better prepare it's user to make an educated decision on the true cost to select one car over another.  This estimates the cost from the car's current state to get to 200,000 miles!</strong></p>
-  	</div>
-</div>
-
-
-<!--title-->
-<div class="row">
-   <div class="col-xs-offset-3 col-xs-5" style="background-color: #E2CEEE;  text-align: center;   border-radius:20px;">
-    <h1>Car Compare Tool</h1>  
+<!--titleBar-->
+<div class="row" id="titleBar">
+   <div class="col-xs-12" >
+    <h1>Car Comparison Tool</h1>  
   </div>
+</div>
 </div>
 
 
 
 <!--Car Compare Tool-->
-<div class= "container" style="background-color: #E2CEEE;  border-radius:10px;">
+<div class= "container" >
 
 <!--Instructions-->
-<div class="row">
-    <article class=" col-xs-offset-2 col-xs-8 " style="background-color:#E2CEaa; border-radius:10px;">
-      <h4>Type in the information of a car you are thinking of purchaseing.  Find out what the "true cost/value" of that car is.  And compare it to your expectations to see if it is a smart investment or not.</h4>
+<div class="row" id="instructions" >
+	<iframe class=" col-xs-12 col-sm-offset-2 col-sm-4 vcenter"  width="560" height="315" src="https://www.youtube.com/embed/XOpxutn158s" frameborder="0" allowfullscreen></iframe>
+    <article class=" col-xs-12 col-sm-offset-0 col-sm-4 vcenter " >
+      <p>I built this tool to help decide if I should buy one particular car over another.  There are various factors that contibute to the actual longevity of the car.  Here, I am intrested in some sort of standard to compare to.  This tool gives the user a reasonable starting point to make an educated decision on thier options.</p>
+          	<p><strong> This estimates the cost from the car's current state to get to 200,000 miles!</strong></p>
      </article>
 </div>
 
 
 
 <!--FORM -->
-<div class="row">
+<div class="formBox">
+	<div class="row " id="formRow1">
+		<form class="form-inline col-xs-offset-2 col-xs-4 "  >
+		  <div class="form-group">
+		  	<div class="input-group-addon">Name of Car</div>
+		    <div class="input-group">
+		      <input type="text" class="form-control " id="carName" placeholder="make and model">
+		    </div>	  	
+		  </div>
+		</form>
+		<form class="form-inline  col-xs-4 "  >
+		  <div class="form-group">
+		  	<div class="input-group-addon">DISTANCE TO WORK</div>
+		    <div class="input-group">
+		      <input type="number" class="form-control" id="workDistance" placeholder="Number of miles to work">
+		      <div class="input-group-addon">Miles</div>
+		    </div>
+		  </div>
+		</form>
+	</div>
 
-	<form class= "col-xs-offset-2 col-xs-8 " >
-	  <div class="form-group">
-	  	<div class="input-group-addon">Name of Car</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
-	    <div class="input-group">
-	      <input type="text" class="form-control " id="carName" placeholder="make and model">
+	<div class="row">
+		<form class="form-inline col-xs-offset-2 col-xs-4 ">
+		  <div class="form-group">
+		  	<div class="input-group-addon">Asking Price</div>
+		    <div class="input-group">
+		      <div class="input-group-addon">$</div>
+		      <input type="number" class="form-control" id="askingPrice" placeholder="Asking Price">
+		      <div class="input-group-addon">.00</div>
+		    </div>	  	
+		  </div>
+		</form>
+		<form class="form-inline  col-xs-4 " >
+		  <div class="form-group">
+		  	<div class="input-group-addon"> Current Cost of Gas</div>
+		    <div class="input-group">
+		      <input type="number" class="form-control" id="currentGasCost" placeholder="Cost of Gas Today">
+		      <div class="input-group-addon">Miles</div>
+		    </div>
+		  </div>
+		</form>
+	</div>
 
-	  </div>
-	</form>
+
+	<div class="row">
+		<form class="form-inline col-xs-offset-2  col-xs-4 " >
+		  <div class="form-group">
+		  	<div class="input-group-addon">UpFront Work Cost</div>
+		    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
+		    <div class="input-group">
+		      <div class="input-group-addon">$</div>
+		      <input type="number" class="form-control" id="moreWorkCost" placeholder="UpFront Work">
+		      <div class="input-group-addon">.00</div>
+		  </div>  	
+		  </div>
+		</form>
+		<form class="form-inline  col-xs-4 ">
+		  <div class="form-group">
+		  	<div class="input-group-addon">MPG</div>
+		    <label class="sr-only" for="exampleInputAmount">Miles</label>
+		    <div class="input-group">
+		      <input type="number" class="form-control" id="mpg" placeholder="MPG">
+		      <div class="input-group-addon">Miles</div>
+		    </div>
+		  </div>
+		</form>	
+	</div>
+
+	<div class="row ">
+		<form class="  form-inline col-xs-offset-6 col-xs-4" >
+		  <div class="form-group">
+		  <div class="input-group-addon">Current Milage</div>
+		    <div class="input-group">
+		      <input type="number" class="form-control" id="currentMiles" placeholder="Miles on car">
+		      <div class="input-group-addon">Miles</div>
+		    </div>
+		    </div>
+		</form>
+	</div>
+</div><!--FormBox-->
+</div><!--end Container CCT-->
+
+
+
+<!-- submit button-->
+<div class="row" style="padding-top:1%;">
+<div class="container">
+<button type="button" class=" col-xs-offset-4  col-xs-4 btn btn-primary btn-lg btn-sample" id="process"  onclick="car()">Process</button>
 </div>
-
-<div class="row">
-	<form class="form-inline col-xs-offset-2  col-xs-4" >
-	  <div class="form-group">
-	  	<div class="input-group-addon">DISTANCE TO WORK</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
-	    <div class="input-group">
-	      <input type="text" class="form-control" id="workDistance" placeholder="Number of miles to work">
-	      <div class="input-group-addon">Miles</div>
-	    </div>
-	  </div>
-	</form>
-		<form class="form-inline  col-xs-4">
-	  <div class="form-group">
-	  	<div class="input-group-addon">  Current Cost of Gas</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
-	    <div class="input-group">
-	      <input type="text" class="form-control" id="currentGasCost" placeholder="Number of miles to work">
-	      <div class="input-group-addon">Miles</div>
-	    </div>
-	  </div>
-	</form>
-</div>
-
-
-<div class="row">
-	<form class="form-inline col-xs-offset-2  col-xs-4" >
-	  <div class="form-group">
-	  	<div class="input-group-addon">Current Milage</div>
-	    <label class="sr-only" for="exampleInputAmount">Distance to work (miles)</label>
-	    <div class="input-group">
-	      <input type="text" class="form-control" id="currentMiles" placeholder="Number of miles to work">
-	      <div class="input-group-addon">Miles</div>
-	    </div>
-	  </div>
-	</form>
-		<form class="form-inline  col-xs-4" >
-	  <div class="form-group">
-	  	<div class="input-group-addon">MPG</div>
-	    <label class="sr-only" for="exampleInputAmount">Miles</label>
-	    <div class="input-group">
-	      <input type="text" class="form-control" id="mpg" placeholder="MPG">
-	      <div class="input-group-addon">Miles</div>
-	    </div>
-	  </div>
-	</form>	
-</div>
-
-<div class="row">
-	<form class="col-xs-offset-2  col-xs-4">
-	  <div class="form-group">
-	  	<div class="input-group-addon">UpFront Work Cost</div>
-	    <label class="sr-only" for="exampleInputAmount">UpFront Work</label>
-	    <div class="input-group">
-	      <div class="input-group-addon">$</div>
-	      <input type="text" class="form-control" id="moreWorkCost" placeholder="UpFront Work">
-	      <div class="input-group-addon">.00</div>
-	    </div>
-	  </div>
-	</form>
-	<form class="col-xs-4">
-	  <div class="form-group">
-	  	<div class="input-group-addon">Asking Price</div>
-	    <label class="sr-only" for="exampleInputAmount">Asking Price</label>
-	    <div class="input-group">
-	      <div class="input-group-addon">$</div>
-	      <input type="text" class="form-control" id="askingPrice" placeholder="Asking Price">
-	      <div class="input-group-addon">.00</div>
-	    </div>
-	  </div>
-	</form>
-</div>
-
-
-
-
-<div class="row">
-<button type="button" class=" col-xs-offset-4  col-xs-3 btn btn-primary btn-lg btn-sample" id="process"  onclick="car()">Process</button>
-</div>
-
-
-<div class="row">
-
-	<p class=" col-xs-offset-3 col-xs-5" id="answer" style="background-color: #E2D9E7;"> </p>
 </div>
 
 
-			
+<!-- Answer-->
+<div class="row" style="">
+<div class="container-inline">
+<div class= "panel-heading" style="margin-bottom:7%">
+<p class=" panel-body col-xs-offset-2 col-xs-8" id="answer"  style=" "></p>
+</div>	
 </div>
+</div>
+
 </body>
+
+
+<footer class="row bottom">
+		<div  class=" col-xs-12 text-center ">
+			<img src="images/codeChris Logo.png" class="logosmall"/>
+		</div>
+		<div class="col-xs-12">
+			<div class="container text-center ">
+		      <div class="btn-group" role="group" ><!--buttons-->
+		          <a href="http://www.codechris.com" target="_blank" type="submit" class="btn btn btn-default btn-group btn-group-xs" style="width:200px;"><span class="glyphicon glyphicon-play"></span> Visit My Website</a>     
+		          <a href="http://github.com/keyFrameM/CarCompareTool" target="_blank" type="submit" class="btn btn btn-default btn-group btn-group-xs" style="width:200px;"><span class="glyphicon glyphicon-folder-open"></span> &nbsp View SourceCode</a>
+		      </div>  
+			</div>
+		</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
 
 

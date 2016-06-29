@@ -1,33 +1,4 @@
 
-
-
-
-$(function(){
-	$("button").click(function(){
-		$("#box").fadeOut(carPhoto)
-	});
-});
-
-function test(){ //test was used to verify that issue was only happenign with globals  created from parsed strings
-
-var mpg = parseInt(document.getElementById("mpg").value,10);
-var costGallon = parseInt(document.getElementById("currentGasCost").value,10);
-var costCar = parseInt(document.getElementById("askingPrice").value,10);
-var currentMiles = parseInt(document.getElementById("currentMiles").value,10);
-var dayMiles= parseInt(document.getElementById("workDistance").value,10);
-var aveYearMiles =  dayMiles*(2*5*52);//one way trip s cause back and forth in a day  5 days for work week  52 weeks per year.
-var moreWork = document.getElementById("moreWork").checked;
-
-console.log("dayMiles: " + dayMiles + typeof dayMiles);
-console.log("carName: " + carName + typeof carName);
-console.log("mpg: " + mpg + typeof mpg);
-console.log("costGallon: " + costGallon + typeof costGallon);
-console.log("costCar: " + costCar + typeof costCar);
-console.log("aveYearMiles: " + aveYearMiles + typeof aveYearMiles); //trips*days*weeks;
-document.getElementById("answer").innerHTML = carname + mpg;
-}
-
-
 //How much GAS$ will be spent before hit 200,000 miles? # completed#
 function dif()
 {
@@ -83,6 +54,8 @@ var carName = document.getElementById("carName").value;
 document.getElementById("answer").innerHTML = "It would cost $" + total() + " to get 200,000 miles  from the " +carName;
 }
 /*
+
+
 //--------------future implimentation------------
 
 // var lifeSpan = parseFloat(span()).toFixed(2);

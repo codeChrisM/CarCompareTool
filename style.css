@@ -1,4 +1,77 @@
 
+#titleBar{
+	background-color: #e2eced;  
+	text-align: center;
+	padding-top: 1%;
+	margin-bottom: 1%;
+
+}
+#instructions{
+	background-color: #729AD4;  
+
+
+}
+
+body{
+	margin: 0;
+}
+#answer{
+	text-align: center;
+	font-size: 32px;
+	border-radius:5px;
+	background-color: #e2eced; 
+}	
+
+.formRow{
+
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+#instructions iframe{
+	width: 560;
+	height: 315;
+	border-radius:5px;
+	background-color: black;
+}
+
+#instructions article{
+	border-radius:5px;
+	background-color: #e2eced;
+}
+
+.form-group{
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.formBox{
+	background-color: gray;
+	border-radius: 10px;
+}
+
+#formRow1{
+	margin-top: 10px;
+}
+
+.logosmall{
+	width: auto;
+	height: 35px;
+}
+#process{
+	margin-top: 2%;
+}
+.bottom{
+background-color: #e2eced;
+padding-bottom: 1%;
+}
+article{
+	padding: 5%;
+}
+
 
 .color-primary-0 { color: #26785F }	/* Main Primary color */
 .color-primary-1 { color: #B5DDD1 }
