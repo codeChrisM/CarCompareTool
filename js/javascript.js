@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //How much GAS$ will be spent before hit 200,000 miles? # completed#
 function dif()
 {
